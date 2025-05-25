@@ -2,8 +2,8 @@
 #curl -L https://github.com/lade-io/lade/releases/latest/download/lade-linux-amd64.tar.gz | tar xz
 #sudo mv lade /usr/local/bin
 spawn lade login
-expect "Urername"   # 等待菜单提示的关键字
+expect -re "*Urername*"   # 等待菜单提示的关键字
 send "sbl999@qq.com\r"   
-expect "Password\n"
+expect -re "*Password*"
 send "!sblly1986"
 expect eof
